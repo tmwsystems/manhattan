@@ -12,14 +12,41 @@
         <link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet" />
         <link href="styles/main.css" rel="stylesheet" />
     </head>
-    <body>
+       
         <div data-role="view" id="tabstrip-home" data-title="Hello World!">
             <h1>Welcome!</h1>
-            <p>
-                Icenium&trade; enables you to build cross-platform device applications regardless of your 
-                development platform by combining the convenience of a local development toolset with the 
-                power and flexibility of the cloud.
-            </p>
+            <div class="nav_wrap">
+                    <ul id="nav" style="-webkit-transform: translate3d(0, 0, 0);">
+                      <li><a href="#"><div id="nav1"></div></a>
+                        <ul>
+                          <li><a class="sub_nav" href="#somthin">somthin</a></li>
+                          <li><a href="#test">Test</a></li>
+                          <li><a href="#">Sub-Item 1 c</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="#"><div id="nav2"></div></a>
+                        <ul>
+                          <li><a href="#">Sub-Item 2 a</a></li>
+                          <li><a href="#">Sub-Item 2 b</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="#"><div id="nav3"></div></a>
+                        <ul>
+                          <li><a href="#">Sub-Item 3 a</a></li>
+                          <li><a href="#">Sub-Item 3 b</a></li>
+                          <li><a href="#">Sub-Item 3 c</a></li>
+                    
+                        </ul>
+                      </li>
+                      <li><a href="#"><div id="nav4"></div></a>
+                        <ul>
+                          <li><a href="#">Sub-Item 4 a</a></li>
+                          <li><a href="#">Sub-Item 4 b</a></li>
+                    
+                        </ul>
+                      </li>
+                    </ul>
+            </div>
         </div>
 
         <div data-role="view" id="tabstrip-uiinteraction" data-title="UI Interaction">
@@ -36,13 +63,148 @@
         </div>
 
         <div data-role="view" id="tabstrip-geolocation" data-title="Geolocation">
+            <h1>Sample Form</h1>
+            <form action="./index.html">
+                <ul data-role="listview" data-style="inset">
+            <li>
+                <select>
+                    <option value="First Option">First Option</option>
+                    <option value="Second Option">Second Option</option>
+                    <option value="Third Option">Third Option</option>
+                    <option value="Fourth Option">Fourth Option</option>
+                </select>
+                Select element
+            </li>
+            <li>
+                <select id="dropdown">
+                    <option value="First Option">First Option</option>
+                    <option value="Second Option">Second Option</option>
+                    <option value="Third Option">Third Option</option>
+                    <option value="Fourth Option">Fourth Option</option>
+                    <option value="First Option">Fifth Option</option>
+                    <option value="Sixth Option">Sixth Option</option>
+                </select>
+                DropDownList
+            </li>
+            <li>
+                <input type="text" value="Text" />
+                Type text
+            </li>
+            
+        </ul>
+                
+            </form>
+        </div>
+            
+            
+        <div data-role="view" id="tabstrip-settings" data-title="Settings" data-init="initForm">
+            <h1>Settings</h1>
+            <div>
+                <form action="./index.html">
+        <ul data-role="listview" data-style="inset">
+            <li>
+                <select>
+                    <option value="First Option">First Option</option>
+                    <option value="Second Option">Second Option</option>
+                    <option value="Third Option">Third Option</option>
+                    <option value="Fourth Option">Fourth Option</option>
+                </select>
+                Select element
+            </li>
+            <li>
+                <select id="dropdown">
+                    <option value="First Option">First Option</option>
+                    <option value="Second Option">Second Option</option>
+                    <option value="Third Option">Third Option</option>
+                    <option value="Fourth Option">Fourth Option</option>
+                    <option value="First Option">Fifth Option</option>
+                    <option value="Sixth Option">Sixth Option</option>
+                </select>
+                DropDownList
+            </li>
+            <li>
+                <input type="text" value="Text" id="text" />
+                Type text
+            </li>
+            <li>
+                <input type="password" value="password" id="password" />
+                Type password
+            </li>
+            <li>
+                <input type="search" value="search" id="search" />
+                Type search
+            </li>
+            <li>
+                <input type="url" value="http://www.kendoui.com" id="url" />
+                Type url
+            </li>
+            <li>
+                <input type="email" value="kendoui@kendoui.com" id="email" />
+                Type email
+            </li>
+            <li>
+                <input type="number" value="20" id="number" />
+                Type number
+            </li>
+            <li>
+                <input type="tel" value="+44 22 11 10" id="tel" />
+                Type tel
+            </li>
+            <li>
+                <input type="date" value="2012-03-22" id="date" />
+                Type date
+            </li>
+            <li>
+                <input type="time" value="22:30" id="time" />
+                Type time
+            </li>
+            <li>
+                <input type="month" value="2012-01" id="month" />
+                Type month
+            </li>
+            <li>
+                <input type="datetime" value="" id="datetime" />
+                Type datetime
+            </li>
+            <li>
+                <textarea>Multiline
+Text</textarea>
+                Textarea
+            </li>
+        </ul>
+    </form>
+            </div>
+        </div>    
+            
+            
+        <div data-role="view" id="test" data-title="test">
             <h1>My Location</h1>
-            <div id="geoLocationContainer">
-                <div id="myLocation">Unable to get location information. Please check your network connection and try again.</div>
-                <a id="refreshMap" data-role="button" data-click="getLocation" data-icon="refresh">Refresh Location</a>
-                <div id="map_canvas"></div>
+            <div id="testContainer">
+                <div><p>This is a test of your emergency view page. In the case of a real emergency actual data would appear here.</p></div>
             </div>
         </div>
+    
+    
+                <div id="somthin" data-role="view" data-title="somthin">
+            	<ul data-role="listview" data-style="inset">
+            		<li>
+            			<!-- search -->
+            			<input type="search" value="search" />
+            			Search:
+            		</li>
+            		<li>
+            			<!-- url -->
+            			<input type="url" value="http://www.kendoui.com" />
+            			URL:
+            		</li>
+            		<li>
+            			<!-- email -->
+            			<input type="email" value="kendoui@kendoui.com" />
+            			Email:
+            		</li>
+            	</ul>
+            </div>
+            
 
         <div data-role="layout" data-id="mobile-tabstrip">
             <header data-role="header">
@@ -51,11 +213,12 @@
                 </div>
             </header>
 
-            <div data-role="footer">
-                <div data-role="tabstrip">
+        <div data-role="footer">
+                 <div data-role="tabstrip">
                     <a href="#tabstrip-home" data-icon="home">Home</a>
                     <a href="#tabstrip-uiinteraction" data-icon="share">UI Interaction</a>
                     <a href="#tabstrip-geolocation" data-icon="globe">Geolocation</a>
+                     <a href="#tabstrip-settings" data-icon="settings">Settings</a>
                 </div>
             </div>
         </div>
@@ -66,12 +229,50 @@
                     <a href="#tabstrip-home" data-icon="home">Home</a>
                     <a href="#tabstrip-uiinteraction" data-icon="share">UI Interaction</a>
                     <a href="#tabstrip-geolocation" data-icon="globe">Geolocation</a>
+                    <a href="#tabstrip-settings" data-icon="settings">Settings</a>
                 </div>
             </div>
         </div> 
+       
+            
+       <script>
+    function initForm() {
+        var body = $(".km-vertical,.km-horizontal");
 
-        <script>
-            var app = new kendo.mobile.Application(document.body, { transition: "slide", layout: "mobile-tabstrip" });
-        </script>
-    </body>
+        if (kendo.ui.DropDownList) {
+            $("#dropdown").kendoDropDownList({
+            });
+        }
+    }
+</script>
+
+<style scoped>
+    #forms input:not([type=checkbox]):not([type=radio]),
+    #forms select,
+    #forms .k-dropdown
+    {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 50%;
+    }
+</style>    
+            
+       <script>
+           /*Activates and Configures Kendo Mobile App */
+           var app = new kendo.mobile.Application(document.body, { transition: "slide", layout: "mobile-tabstrip" });
+           
+           $(document).ready(function () {
+               /*Toggles Accordian Slide*/
+               $('#nav > li > a').mousedown(function(){
+                   $(this).next().slideToggle();
+               });
+               
+               /*Toggles Nav Image*/
+               $('#nav li div').mousedown( function() {
+                  $(this).toggleClass('active');
+               });
+            });   
+       </script>
+
+
 </html>
